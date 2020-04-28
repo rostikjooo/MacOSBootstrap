@@ -29,8 +29,6 @@ PACKAGES=(
     swiftlint # linter
     sourcery # codegen
     swiftgen # codegen
-    qlcolorcode #quick loock doping
-    qlmarkdown #quick loock doping
     git
     hub #github client
     npm
@@ -43,6 +41,8 @@ PACKAGES=(
 )
 # MARK: - BREW CASK PACKAGES
 CASKS=(
+    qlcolorcode #quick loock doping
+    qlmarkdown #quick loock doping
     maccy # clipboard manager
     insomnia # postman-like app
     postman
@@ -88,13 +88,13 @@ fi
 brew update
 
 # Install GNU core utilities (those that come with OS X are outdated)
-brew tap homebrew/dupes
+#brew tap homebrew/dupes
 brew install coreutils
-brew install gnu-sed --with-default-names
-brew install gnu-tar --with-default-names
-brew install gnu-indent --with-default-names
-brew install gnu-which --with-default-names
-brew install gnu-grep --with-default-names
+#brew install gnu-sed --with-default-names
+#brew install gnu-tar --with-default-names
+#brew install gnu-indent --with-default-names
+#brew install gnu-which --with-default-names
+#brew install gnu-grep --with-default-names
 
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew install findutils
@@ -104,21 +104,28 @@ brew install bash
 
 
 echo "Installing packages..."
+for pack in "${PACKAGES[@]}"; do
+    brew install $pack
+done
 brew install ${PACKAGES[@]}
 
 echo "Cleaning up..."
 brew cleanup
 
 echo "Installing cask..."
-brew install caskroom/cask/brew-cask
+brew tap homebrew/cask-cask
 
 echo "Installing cask apps..."
-brew cask install ${CASKS[@]}
+for item in "${CASKS[@]}"; do
+    brew cask install $item
+done
 
 echo "Installing fonts..."
-brew tap caskroom/fonts
-
-brew cask install ${FONTS[@]}
+brew tap homebrew/cask-fonts
+for font in "${FONTS[@]}"; do
+    brew cask install $font
+done
+#brew cask install ${FONTS[@]}
 
 #echo "Installing Python packages..."
 #PYTHON_PACKAGES=(
