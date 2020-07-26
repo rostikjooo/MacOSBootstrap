@@ -26,9 +26,9 @@
 # MARK: - BREW PACKAGES
 PACKAGES=(
     carthage
-    swiftlint # linter
-    sourcery # codegen
-    swiftgen # codegen
+    swiftlint # linter for xcode-swift
+    sourcery # codegen for xcode-swift
+    swiftgen # codegen for xcode-swift
     git
     hub #github client
     npm
@@ -41,15 +41,12 @@ PACKAGES=(
 )
 # MARK: - BREW CASK PACKAGES
 CASKS=(
-    qlcolorcode #quick loock doping
-    qlmarkdown #quick loock doping
     maccy # clipboard manager
     insomnia # postman-like app
     postman
     sourcetree
-    iterm2
-    macvim
-    colluquy
+    iterm2 # for insane people)
+    macvim # for even insaner people)
     skype
     slack
     telegram
@@ -78,7 +75,11 @@ declare -a FOLDERS=(
 
 echo "Starting bootstrapping"
 
-# Check for Homebrew, install if we don't have it
+
+#     Before installing homebrew we need run "xcode-select --install"
+#     to install ComandLineTools
+#     in instalation should hit a window with license agreement, so we can't run it automaticaly, or without waiting for user input
+#     Check for Homebrew, install if we don't have it
 if test ! $(which brew); then
     echo "Installing homebrew..."
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
