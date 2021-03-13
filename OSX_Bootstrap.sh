@@ -34,8 +34,7 @@ PACKAGES=(
     sourcery # codegen for swift
     swiftgen # codegen for swift
     git
-    hub #github client
-    gh
+    gh # github cli
     npm
     python
     python3

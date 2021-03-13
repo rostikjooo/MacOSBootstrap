@@ -4,11 +4,11 @@ with basic casual and software developer tools
 
 ## Usage
 1. Install _Xcode Command Line Tools_ (installs with Xcode from AppStore)
-```shell
-xcode-select --install
+```zsh
+$ xcode-select --install
 ```
 2. Do the rest
-```shell
+```zsh
 $ cd ~/Desktop/A;
 $ git clone https://github.com/rostikjooo/MacOSDevBootstrap.git;
 $ chmod 700 OSX_Bootstrap.sh;
