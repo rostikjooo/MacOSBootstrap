@@ -1,4 +1,27 @@
 # MacOSDevBootstrap
-script to setup new MacOS  for iOS developer
+cusomizable script to setup new MacOS  machine
+with basic casual and software developer tools
 
-Warning install xcode or xcode comand line tools
+## Usage
+1. Install _Xcode Command Line Tools_ (installs with Xcode from AppStore)
+```shell
+xcode-select --install
+```
+2. Do the rest
+```shell
+$ cd ~/Desktop/A;
+$ git clone https://github.com/rostikjooo/MacOSDevBootstrap.git;
+$ chmod 700 OSX_Bootstrap.sh;
+$ ./OSX_Bootstrap.sh
+```
+
+
+## Tools used
+- homebrew
+    * homebrew/core
+    * homebrew/cask
+    * homebrew/cask-fonts
+- Node Package Manager
+- RubyGems
+
+
