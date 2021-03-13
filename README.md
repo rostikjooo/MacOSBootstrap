@@ -9,10 +9,12 @@ $ xcode-select --install
 ```
 2. Do the rest
 ```zsh
-$ cd ~/Desktop/A;
-$ git clone https://github.com/rostikjooo/MacOSDevBootstrap.git;
-$ chmod 700 OSX_Bootstrap.sh;
-$ ./OSX_Bootstrap.sh
+git clone https://github.com/rostikjooo/MacOSDevBootstrap.git;
+cd MacOSDevBootstrap;
+chmod 700 OSX_Bootstrap.sh;
+./OSX_Bootstrap.sh;
+cd ..;
+rm -rf MacOSDevBootstrap;
 ```
 
 

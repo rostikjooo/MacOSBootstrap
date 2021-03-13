@@ -88,7 +88,7 @@ brew update
 
 echo "Installing packages..."
 for pack in "${PACKAGES[@]}"; do
-        if ! brew info $pack &>/dev/null; then
+        if ! brew list $pack &>/dev/null; then
             brew install $pack
         else
             echo "package" $pack "is already installed"
@@ -99,7 +99,7 @@ brew install ${PACKAGES[@]}
 echo "Cleaning up..."
 brew cleanup
 
-echo "Installing cask..."
+echo "tapping casks..."
 brew tap homebrew/cask
 brew tap homebrew/cask-fonts
 
