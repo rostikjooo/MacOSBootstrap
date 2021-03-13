@@ -17,8 +17,8 @@ $ xcode-select --install
 ```
 2. Do the rest
 ```zsh
-git clone https://github.com/rostikjooo/MacOSDevBootstrap.git;
-cd MacOSDevBootstrap;
+git clone https://github.com/rostikjooo/MacOSBootstrap.git;
+cd MacOSBootstrap;
 chmod 700 OSX_Bootstrap.sh;
 ./OSX_Bootstrap.sh;
 cd ..;
